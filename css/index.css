@@ -192,7 +192,10 @@ i {
 }
 .notifcationBoxWrapper-counBox__text {
   margin: auto;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
+}
+.navbar-link-icon:hover {
+  color: var(--text-color);
 }
 .user-profileImage {
   width: 5rem;
@@ -203,6 +206,7 @@ i {
   position: relative;
   border: 1px solid var(--light-color);
   padding: 0.15rem;
+  cursor: pointer;
 }
 .seetingBoxWrapper {
   width: 4rem;
