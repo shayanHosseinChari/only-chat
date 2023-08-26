@@ -346,3 +346,21 @@ i {
   bottom: 0.5rem;
   font-family: sans-serif;
 }
+.msgcount{
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  background-color: var(--light-color);
+  color: var(--text-color);
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.msgcount-text{
+  margin: auto;
+  
+}
