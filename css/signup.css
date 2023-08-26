@@ -17,7 +17,8 @@ body {
 .container {
   width: 400px;
   padding: 20px;
-  height: 500px;
+  height: max-content;
+  padding-bottom: 30px;
   box-shadow: 0 2px 10px var(--light-color);
   border-radius: 20px;
 }
@@ -49,8 +50,7 @@ body {
   position: relative;
 }
 
-.password,
-.password2 {
+.password {
   width: 100%;
 }
 
@@ -70,21 +70,17 @@ body {
   pointer-events: none;
 }
 
-.password ~ .eye-icon-slash,
-.password2 ~ .eye-icon-slash {
+.password ~ .eye-icon-slash {
   display: none;
 }
-.password ~ .eye-icon,
-.password2 ~ .eye-icon {
+.password ~ .eye-icon {
   display: block;
 }
 
-.password.show ~ .eye-icon-slash,
-.password2.show ~ .eye-icon-slash {
+.password.show ~ .eye-icon-slash {
   display: block;
 }
-.password.show ~ .eye-icon,
-.password2.show ~ .eye-icon {
+.password.show ~ .eye-icon {
   display: none;
 }
 
