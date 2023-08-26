@@ -11,6 +11,8 @@
   --dark-bg: #1d1626;
   --light-color: #7a4bd8;
   --light-red: #e76060;
+  scrollbar-color: transparent !important;
+  scrollbar-width: thin !important;
 }
 
 html {
@@ -49,14 +51,62 @@ i {
 
 
 /* -------------------------- Start Main Styles ------------------------------- */
+.dropshadow{
+  width: 10rem;
+  height: 10rem;
+  background-color: #374d68;
+  /* box-shadow: 0 1rem 70rem 7rem #374d68; */
 
+  filter: blur(70px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* z-index: -1; */
+}
+.dropshadow4{
+  width: 20rem;
+  height: 20rem;
+  transform: rotate(40deg);
+  background-color: #172c3560;
+  /* box-shadow: 0 1rem 70rem 7rem #2a1e41; */
+
+  filter: blur(70px);
+  position: absolute;
+  top: 0;
+  right: 30%;
+}
+.dropshadow3{
+  width: 20rem;
+  height: 20rem;
+  transform: rotate(-40deg);
+  background-color: #22173560;
+  /* box-shadow: 0 1rem 70rem 7rem #2a1e41; */
+
+  filter: blur(70px);
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+}
+.dropshadow2{
+  width: 10rem;
+  height: 10rem;
+  background-color: #2a1e41;
+  /* box-shadow: 0 1rem 70rem 7rem #2a1e41; */
+
+  filter: blur(70px);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 .app{
   width: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 100vh;
   overflow: hidden;
   background:var(--main-color);
+  z-index: 9999;
 }
 .app-navbar{
   width: 100%;
@@ -76,6 +126,19 @@ i {
 .app-navbar__leftBox-text{
   color: var(--text-color);
   margin: auto 0.6rem;
+  font-size: 3rem;
+  font-weight: 900;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial;
+
+}
+.Bold-C{
+  font-size: 3.1rem;
+  color: var(--light-color);
+}
+.Bold-O{
+  font-size: 3.1rem;
+  color: var(--light-color);
+
 }
 .app-navbar__rightbox{
   display: flex;
@@ -115,9 +178,9 @@ i {
 }
 .notifcationBoxWrapper-counBox{
   position: absolute;
-  top: -0.4rem;
+  top: -0.1rem;
   right: 1rem;
-  background-color: red;
+  background-color: var(--light-red);
   width: 2rem;
   height: 2rem;
   border-radius: 100%;
@@ -125,7 +188,7 @@ i {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 .notifcationBoxWrapper-icon{
   width: 3rem;
@@ -146,19 +209,158 @@ i {
   border: 1px solid var(--light-color);
   padding: 0.15rem;
 }
-.devider{
-  width: 100%;
-  height: 0.1rem;
-  background-color: var(--chat2);
+.seetingBoxWrapper{
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-bg);
+  color: var(--text-color);
+  font-weight: 900;
+  border-radius: 0.6rem;
+}
+.seetingBoxWrapper__icon{
+  width: 3rem;
 }
           /* -------------------------- end TopBar Styles ------------------------------- */
+.devider{
+            
+  width: 100% !important;
+  height: 0.1rem !important;
+  background-color: var(--chat2) !important;
+}
+.vertical-devider{
+  width: 0.1rem;
+  height: 100%;
+  background-color: var(--chat2) !important;
+  
 
-          .devider{
-            width: 100%;
-            height: 0.1rem;
-            background-color: var(--chat2);
-          }
+}
+ /* width */
+ ::-webkit-scrollbar {
+  width: 1px;
+}
 
-.sss{
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+} 
+
+.Main-content{
+  width: 100%;
+  display: flex;
+  
+}
+.Main-content__chats{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  overflow-y: scroll;
+  
+}
+.Main-content__chats-title{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.Main-content__chats-title-leftText{
+  margin: auto 0.5rem;
+  color: var(--text-color);
+  font-size: 1.9rem;
+  font-weight: 900;
+}
+.Main-content__chats-chatList{
+  width: 100%;
+  height: 90vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.Main-content__chats-chatList-box{
+  width: 100%;
+  display: flex;
+  padding: 1rem;
+  border-radius: 1rem;
+  align-items: center;
+  position: relative;
+
+}
+.Main-content__chats-chatList-box--active{
+  background: linear-gradient(90deg,#22183475,#2a1e4173,transparent);
+}
+.Main-content__chats-chatList-box-userProfile{
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.chat_userInfoBox{
+  display: flex;
+  flex-direction: column;
+  margin: auto 1rem;
+  height: 100%;
+  justify-content: center;
+  /* align-items: center; */
+  margin-top: 1rem;
+}
+.chat_userInfoBox-title{
+  color: var(--text-color);
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: sans-serif;
+
+  margin: 0;
+}
+.mt2{
+  margin-top: 0.8rem;
+}
+.chat_userInfoBox-subtitle{
+  font-size: 1.2rem;
+  color: var(--text-color);
+  opacity: 0.7;
+  margin: 0;
+  font-family: sans-serif;
+  
+}
+.chat_userInfoBox-date{
+  position: absolute;
+  color: var(--text-color);
+  font-size: 1rem;
+  opacity: 0.5;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  font-family: sans-serif;
+}
+.msgcount{
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  background-color: var(--light-color);
+  color: var(--text-color);
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.msgcount-text{
+  margin: auto;
+  
 }
