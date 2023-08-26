@@ -1,0 +1,51 @@
+@import url("./variables.css");
+@import url("./font.css");
+@import url("./top-bar.css");
+/* Default styles  */
+:root {
+  --main-color: #110f18;
+  --main-color-light: #221834;
+  --chat1: #221834;
+  --chat2: #221834;
+  --text-color: #eee;
+  --dark-bg: #1d1626;
+  --light-color: #7a4bd8;
+  --light-red: #e76060;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  direction: var(--dir);
+}
+
+body {
+  line-height: 1.6;
+  font-size: 1.6rem;
+  font-family: var(--primary-font);
+  background-color: var(--bg-ffffff-gray1001);
+  color: white;
+  overflow-x: hidden !important;
+}
+
+*,
+*::after,
+*::before {
+  outline: none;
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-color);
+  transition: all 400ms ease;
+  /* display: block !important; */
+}
+
+i {
+  user-select: none;
+}
+a:hover {
+  color: #fcd535;
+}
+/* Finnish defaul styles  */
