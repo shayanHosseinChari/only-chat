@@ -7,7 +7,7 @@
   --main-color-light: #221834;
   --chat1: #221834;
   --chat2: #221834;
-  --text-color: #eee;
+  --text-color: #ffffff;
   --dark-bg: #1d1626;
   --light-color: #7a4bd8;
   --light-red: #e76060;
@@ -16,16 +16,14 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-  direction: var(--dir);
+  
 }
 
 body {
   line-height: 1.6;
   font-size: 1.6rem;
-  font-family: var(--primary-font);
-  background-color: var(--bg-ffffff-gray1001);
-  color: white;
-  overflow-x: hidden !important;
+  font-family: sans-serif;
+ 
 }
 
 *,
@@ -45,7 +43,105 @@ a {
 i {
   user-select: none;
 }
-a:hover {
-  color: #fcd535;
-}
+
 /* Finnish defaul styles  */
+
+
+
+/* -------------------------- Start Main Styles ------------------------------- */
+.app{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  background:var(--main-color);
+}
+.app-navbar{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.app-navbar__leftBox{
+  display: flex;
+  align-items: center;
+}
+.app-navbar__lefttbox-icon{
+  width: 3rem;
+  color: var(--light-color);
+}
+.app-navbar__leftBox-text{
+  color: var(--text-color);
+  margin: auto 0.6rem;
+}
+.app-navbar__rightbox{
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+.app-navbar__rightbox-searchBox{
+  width: 30rem;
+  position: relative;
+  background-color: var(--dark-bg);
+  padding: 0.5rem;
+  border-radius: 0.6rem;
+  margin: auto 1rem;
+}
+.app-navbar__rightbox-searchBox--input{
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-color);
+  padding-inline-end:4rem;
+}
+.app-navbar__rightbox-searchBox--icon{
+  position: absolute;
+  right: 1rem;
+  color: var(--text-color);
+  top: 1rem;
+  width: 2rem;
+}
+.notifcationBoxWrapper{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto 1rem;
+}
+.notifcationBoxWrapper-counBox{
+  position: absolute;
+  top: -0.4rem;
+  right: 1rem;
+  background-color: red;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--text-color);
+}
+.notifcationBoxWrapper-icon{
+  width: 3rem;
+  color: var(--text-color);
+
+}
+.notifcationBoxWrapper-counBox__text{
+  margin: auto;
+  font-size: 1.4rem;
+}
+.user-profileImage{
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 100%;
+  margin: auto 1rem;
+  position: relative;
+  border: 1px solid var(--light-color);
+  padding: 0.2rem;
+}
