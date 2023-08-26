@@ -375,6 +375,7 @@ i {
   height: 65px;
   border-radius: 50%;
   overflow: hidden;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
 }
 
 .chat-box-member-profile-img {
@@ -411,13 +412,20 @@ i {
 }
 
 .chat-box-receipt-msg {
-  margin-left: 20px;
   background-color: var(--dark-bg);
 }
 .chat-box-send-msg {
-  margin-right: 20px;
-  margin-left: auto;
   background-color: var(--light-color);
+}
+
+.chat-box-row-msg {
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+}
+
+.chat-box-receipt-row-msg {
+  justify-content: flex-end;
 }
 
 .input-box {
