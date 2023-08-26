@@ -1,21 +1,7 @@
 @import url("./variables.css");
 @import url("./font.css");
-@import url("./top-bar.css");
-/* Default styles  */
-:root {
-  --main-color: #110f18;
-  --main-color-light: #221834;
-  --chat1: #221834;
-  --chat2: #221834;
-  --text-color: #ffffff;
-  --dark-bg: #1d1626;
-  --light-color: #7a4bd8;
-  --light-blue: #48a2f4;
-  --light-red: #e76060;
-  scrollbar-color: transparent !important;
-  scrollbar-width: thin !important;
-}
 
+/* Default styles  */
 html {
   box-sizing: border-box;
   font-size: 62.5%;
