@@ -50,8 +50,7 @@ body {
   position: relative;
 }
 
-.password,
-.password2 {
+.password {
   width: 100%;
 }
 
@@ -71,21 +70,17 @@ body {
   pointer-events: none;
 }
 
-.password ~ .eye-icon-slash,
-.password2 ~ .eye-icon-slash {
+.password ~ .eye-icon-slash {
   display: none;
 }
-.password ~ .eye-icon,
-.password2 ~ .eye-icon {
+.password ~ .eye-icon {
   display: block;
 }
 
-.password.show ~ .eye-icon-slash,
-.password2.show ~ .eye-icon-slash {
+.password.show ~ .eye-icon-slash {
   display: block;
 }
-.password.show ~ .eye-icon,
-.password2.show ~ .eye-icon {
+.password.show ~ .eye-icon {
   display: none;
 }
 
@@ -131,9 +126,11 @@ body {
   text-align: center;
   font-weight: 700;
   border-radius: 10px;
+  cursor: pointer;
   transition: opacity 0.4s;
 }
 
 .form-btn.disabled {
   opacity: 0.5;
+  cursor: default;
 }
