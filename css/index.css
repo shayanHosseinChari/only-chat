@@ -817,7 +817,8 @@ i {
   flex-direction: row-reverse;
 }
 .biography-content__icon {
-  width: 3rem;
+  width: 25px;
+  margin-right: 5px;
   color: var(--light-color);
 }
 .biography-content__text {
@@ -857,4 +858,20 @@ i {
 .usernameWrapper-iocn,
 .edit-icon {
   cursor: pointer;
+}
+
+.biography-content__icon {
+  font-size: 1rem !important;
+}
+
+.edit-icon {
+  width: 20px !important;
+  margin-right: 10px;
+}
+
+.setting-devider {
+  margin-bottom: 20px !important;
+  width: 100% !important;
+  height: 2px !important;
+  background-color: var(--main-color-light) !important;
 }
