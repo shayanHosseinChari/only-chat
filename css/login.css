@@ -102,6 +102,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 #checkbox::after {
@@ -127,10 +128,4 @@ body {
   font-weight: 700;
   border-radius: 10px;
   cursor: pointer;
-  transition: opacity 0.4s;
-}
-
-.form-btn.disabled {
-  opacity: 0.5;
-  cursor: default;
 }
