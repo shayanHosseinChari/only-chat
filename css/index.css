@@ -209,6 +209,10 @@ i {
   font-weight: 900;
   border-radius: 0.6rem;
 }
+.active-opensetting {
+  background-color: var(--light-color);
+  color: var(--text-color);
+}
 .seetingBoxWrapper__icon {
   width: 3rem;
 }
@@ -337,7 +341,6 @@ i {
   position: relative;
   width: 45%;
   height: 91vh;
-  border-right: 1px solid var(--main-color-light);
 }
 
 .msg-container {
@@ -362,7 +365,7 @@ i {
   height: 65px;
   border-radius: 50%;
   overflow: hidden;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 0.5rem #442d71;
 }
 
 .chat-box-member-profile-img {
@@ -461,6 +464,66 @@ i {
   display: flex;
   flex-direction: column;
 }
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999999999999999;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0.555);
+}
+.modal-wrapper--active {
+  display: flex;
+}
+.modal-box {
+  background-color: var(--dark-bg);
+  padding: 1rem 3rem;
+  /* border-radius: 1rem; */
+  display: none;
+  flex-direction: column;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.modal-box--active {
+  display: flex;
+}
+.modal-box__title {
+  color: var(--text-color);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.modal-box__btn {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  background-color: var(--light-color);
+  color: var(--text-color);
+}
+.modal-box__input {
+  background-color: transparent;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  color: var(--text-color);
+}
+.copyrighttext {
+  position: absolute;
+  bottom: 2rem;
+  left: 1rem;
+  font-size: 1.1rem;
+  color: var(--light-color);
+  text-align: center;
+  z-index: 99999999999999999999999999999999999999999999999;
+}
 
 .edit-profile {
   position: absolute;
@@ -525,4 +588,273 @@ i {
   padding: 20px;
   color: var(--text-color);
   opacity: 0.7;
+}
+.right-box__clientInfo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -9;
+  transition: all 0.4s;
+}
+
+.setting-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  overflow-y: scroll;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -9;
+  transition: all 0.4s;
+}
+.profileBanner {
+  width: 100%;
+  height: 20rem;
+  position: relative;
+  overflow: hidden;
+}
+.profileBanner:hover .profileBanner-img {
+  filter: blur(10px);
+}
+.profileBanner:hover::after {
+  bottom: -10rem;
+}
+.profileBanner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transition: all 0.6s;
+  height: 6rem;
+  /* box-shadow: 0 0 1rem red; */
+  z-index: 9;
+  background: linear-gradient(360deg, var(--main-color), transparent);
+}
+.profileBanner-img {
+  transition: all 0.4s;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.active-clientBox {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+.bioGraphyWrapperAndName {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 9;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem;
+}
+.bioGraphyWrapperAndName-Name {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 900;
+  color: var(--text-color);
+}
+.bioGraphyWrapperAndName__bioWrapper {
+  transition: all 0.4s ease;
+}
+.bioGraphyWrapperAndName__bioWrapper-text {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  opacity: 0.6;
+}
+.logoutWrapperbox {
+  position: absolute;
+  top: 0.7rem;
+  left: 0.3rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--light-red);
+  align-items: center;
+  border-radius: 100%;
+  color: white;
+  z-index: 99999999999;
+}
+.logoutWrapperbox-icon {
+  width: 2rem;
+}
+.usernameWrapper {
+  display: flex;
+  align-items: center;
+}
+.usernameWrapper-iocn {
+  width: 3rem;
+  color: var(--light-color);
+  margin: auto 0.7rem;
+}
+.isOnlineWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
+  z-index: 999;
+}
+.isOnlineWrapper-text {
+  color: #d3d3d3;
+  font-size: 1.8rem;
+  position: relative;
+  font-weight: 900;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  height: max-content;
+  display: inline;
+}
+.isOnlineWrapper-text::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: -1.5rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  animation: shadow 0.8s infinite;
+  background-color: rgb(83, 211, 83);
+  transition: all 400ms;
+}
+@keyframes shadow {
+  0% {
+    box-shadow: 0 0 0.1rem rgb(44, 240, 44);
+  }
+  100% {
+    box-shadow: 0 0 1rem green;
+  }
+}
+.edituserName-wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 0rem;
+
+  height: 4rem;
+  z-index: 999;
+}
+.modal-wrapper--acitve {
+  display: flex;
+}
+.edituserName-wrapper__content {
+  width: 0;
+  display: flex;
+  position: relative;
+  height: 100%;
+  background-color: var(--dark-bg);
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  transition: all 400ms;
+  bottom: 2rem;
+}
+.close-setting {
+  position: absolute;
+  top: 0.5rem;
+  z-index: 9999999999999999;
+  right: 0.5rem;
+}
+.close-setting__icon {
+  width: 3rem;
+  background-color: #2a1e4156;
+  border-radius: 0.6rem;
+  color: var(--light-color);
+}
+
+.edituserName-wrapper-input {
+  width: 100%;
+  color: var(--text-color);
+  outline: none;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 1.3rem;
+  font-family: sans-serif;
+  padding-inline-end: 3rem;
+}
+.edituserName-wrapper-icon {
+  width: 2rem;
+  position: absolute;
+  right: 0.5rem;
+  top: 1rem;
+}
+.edituserName-wrapper__content--active {
+  width: 21rem;
+  z-index: 999999;
+}
+.setting-box__information {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+  margin-top: 5rem;
+}
+.biography-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  padding-right: 15px;
+  flex-direction: row-reverse;
+}
+.biography-content__icon {
+  width: 3rem;
+  color: var(--light-color);
+}
+.biography-content__text {
+  margin: auto 1rem;
+  color: var(--text-color);
+  opacity: 0.5;
+  font-size: 1.3rem;
+  word-wrap: break-word;
+}
+.idwrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 1rem;
+}
+.idwrapperTitle {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  font-weight: bold;
+  margin: 0;
+}
+.idwrappersubTitle {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  opacity: 0.5;
+  margin: 0;
+}
+.id-icon {
+  position: absolute;
+  right: 1rem;
+}
+
+.close-setting,
+.edituserName-wrapper-icon,
+.logoutWrapperbox-icon,
+.usernameWrapper-iocn,
+.edit-icon {
+  cursor: pointer;
 }
