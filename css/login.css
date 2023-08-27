@@ -19,7 +19,9 @@ body {
   padding: 20px;
   padding-bottom: 30px;
   height: max-content;
-  box-shadow: 0 2px 10px var(--light-color);
+  box-shadow: 0 0.2rem 1rem #000000 , inset 0 0.2rem 1rem #471c69;
+  border-radius: 20px;
+  border: 1px solid #9000ff;
   border-radius: 20px;
 }
 
