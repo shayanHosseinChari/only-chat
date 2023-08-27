@@ -140,3 +140,12 @@ body {
   opacity: 0.5;
   cursor: default;
 }
+
+.form-text {
+  color: #eeeeee;
+}
+
+.form-link {
+  font-weight: 700;
+  color: var(--light-color);
+}
